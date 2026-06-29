@@ -1,0 +1,72 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body, #root { height: 100%; width: 100%; }
+
+body {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse 70vw 55vh at 8% 12%,  var(--blob-sage-1) 0%, transparent 65%),
+    radial-gradient(ellipse 60vw 50vh at 92% 90%, var(--blob-terra-1) 0%, transparent 65%),
+    radial-gradient(ellipse 45vw 40vh at 88% 8%,  var(--blob-sage-2) 0%, transparent 60%),
+    radial-gradient(ellipse 50vw 40vh at 5% 92%,  var(--blob-terra-2) 0%, transparent 60%),
+    radial-gradient(circle, var(--dot) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 24px 24px;
+  background-attachment: fixed;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  line-height: 1.6;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* ── Light theme vars ──────────────────────────────── */
+body.theme-light {
+  --bg:         #ede9e3;
+  --ink:        #2c2825;
+  --blob-sage-1:  rgba(107,143,114,0.09);
+  --blob-terra-1: rgba(193,127,96,0.07);
+  --blob-sage-2:  rgba(107,143,114,0.05);
+  --blob-terra-2: rgba(193,127,96,0.05);
+  --dot:          rgba(150,136,124,0.28);
+}
+
+/* ── Dark theme vars ───────────────────────────────── */
+body.theme-dark {
+  --bg:         #1c1916;
+  --ink:        #ede8e0;
+  --blob-sage-1:  rgba(90,125,97,0.12);
+  --blob-terra-1: rgba(160,100,70,0.09);
+  --blob-sage-2:  rgba(90,125,97,0.07);
+  --blob-terra-2: rgba(160,100,70,0.06);
+  --dot:          rgba(80,70,60,0.45);
+}
+
+::selection { background: #bfd4c2; }
+button  { cursor:pointer; border:none; background:none; font-family:inherit; color:inherit; }
+textarea, input, select { font-family:inherit; border:none; outline:none; }
+audio   { border-radius:6px; width:100%; }
+img     { max-width:100%; display:block; }
+
+::-webkit-scrollbar       { width:4px; }
+::-webkit-scrollbar-thumb { background:#ccc4bb; border-radius:2px; }
+
+/* ── Animations ──────────────────────────────────────── */
+@keyframes rise    { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+@keyframes drop    { from{opacity:0;transform:translateY(-10px)} to{opacity:1;transform:translateY(0)} }
+@keyframes fadein  { from{opacity:0} to{opacity:1} }
+@keyframes fadeout { from{opacity:1} to{opacity:0} }
+@keyframes blink   { 0%,100%{opacity:1} 50%{opacity:0.08} }
+@keyframes breathe { 0%,100%{transform:scale(1)} 50%{transform:scale(1.04)} }
+@keyframes slideup { from{transform:translateY(100%)} to{transform:translateY(0)} }
+@keyframes pop     { 0%{opacity:0;transform:scale(0.95)} 60%{transform:scale(1.015)} 100%{opacity:1;transform:scale(1)} }
+@keyframes navrise { from{opacity:0;transform:translateX(-50%) translateY(14px)} to{opacity:1;transform:translateX(-50%) translateY(0)} }
+@keyframes pulse   { 0%,100%{transform:scale(1);opacity:0.9} 50%{transform:scale(1.12);opacity:1} }
+
+/* ── Mobile ──────────────────────────────────────────── */
+@media (max-width: 480px) {
+  body { font-size:15px; }
+  audio { height:40px; }
+  .timer-display { font-size:clamp(68px,20vw,100px) !important; }
+  .think-display { font-size:clamp(96px,28vw,140px) !important; }
+}

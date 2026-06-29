@@ -1,0 +1,12 @@
+{
+  "name": "PrepZero",
+  "short_name": "PrepZero",
+  "description": "Read. Think. Speak. Practice extempore speaking with live transcription and audio recording.",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#6b8f72",
+  "background_color": "#ede9e3",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

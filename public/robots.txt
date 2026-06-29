@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://prepzero.app/sitemap.xml

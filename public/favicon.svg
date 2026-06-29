@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Background rounded square -->
+  <rect width="64" height="64" rx="14" fill="#6b8f72"/>
+  <!-- Subtle inner shadow top -->
+  <rect width="64" height="64" rx="14" fill="url(#topshine)" opacity="0.2"/>
+  <!-- P letterform -->
+  <text x="9" y="47" font-family="Georgia, serif" font-size="42" font-weight="700" fill="#fff" letter-spacing="-1">P</text>
+  <!-- Zero dot — top right, represents "zero prep" -->
+  <circle cx="48" cy="18" r="9" fill="none" stroke="#fff" stroke-width="3.5" opacity="0.9"/>
+  <defs>
+    <linearGradient id="topshine" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </linearGradient>
+  </defs>
+</svg>
